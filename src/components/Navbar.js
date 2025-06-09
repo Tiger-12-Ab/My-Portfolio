@@ -124,7 +124,7 @@ export default function Navbar() {
           isOpen ? "translate-x-0" : "-translate-x-full"
         }`}
       >
-        <div className="px-6 pt-12 space-y-2">
+        <div className="px-6 pt-20 space-y-2">
           <Link
             to="/"
             className="block text-richblack hover:bg-darkgray hover:text-lightgray hover:rounded px-4 py-2 font-bold transition"
