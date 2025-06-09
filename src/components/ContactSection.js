@@ -65,7 +65,7 @@ const ContactSection = () => {
             <div>
               <strong>Email:</strong>{" "}
               <a href="mailto:akibabrar2005@gmail.com" className="hover:underline">
-                akibabrar2005@gmail.com
+                tiger.12.ht@gmail.com
               </a>
             </div>
             <div>

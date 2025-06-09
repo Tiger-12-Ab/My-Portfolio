@@ -25,7 +25,7 @@ export default function Footer() {
 
   {/* Contact Info (still centered on all screens) */}
   <div className="flex flex-col lg:flex-row lg:space-x-6 text-sm text-mutedgray text-center lg:text-left">
-    <span>Email: akibabrar2005@gmail.com</span>
+    <span>Email: tiger.12.ht@gmail.com</span>
     <span>Phone: +880 1560-005502</span>
   </div>
 </div>

@@ -122,7 +122,7 @@ const About = () => {
               <li>
                 <div className="text-md">
                   <strong className="text-richblack">Email:</strong>{" "}
-                  akibabrar2005@gmail.com
+                  tiger.12.ht@gmail.com
                 </div>
               </li>
               <li>
