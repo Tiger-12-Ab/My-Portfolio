@@ -26,7 +26,7 @@ const ProjectHighlights = () => {
   const settings = {
     dots: true,
     arrows: false,
-    infinite: false,
+    infinite: true,
     speed: 600,
     autoplay: true,
     autoplaySpeed: 4000,
@@ -37,12 +37,14 @@ const ProjectHighlights = () => {
         breakpoint: 1024,
         settings: {
           slidesToShow: 2,
+          dots: true
         },
       },
       {
         breakpoint: 768,
         settings: {
           slidesToShow: 1,
+          dots: true
         },
       },
     ],
@@ -61,48 +63,49 @@ const ProjectHighlights = () => {
 
         {projects.length > 0 ? (
           <div className="flex justify-center">
-            <div className="max-w-7xl w-full mx-auto px-4">
+            <div className="max-w-7xl w-full mx-auto px-4 ">
               <Slider {...settings}>
                 {projects.map((project) => (
-                  <div
-                    key={project.id}
-                    onClick={() => navigate(`/project/${project.id}`)}
-                    className="cursor-pointer bg-sloughtgray shadow hover:shadow-md rounded-xl overflow-hidden p-4 transition-all mx-auto w-full max-w-sm"
-                  >
-                    {project.image && (
-                      <img
-                        src={project.image}
-                        alt={project.title}
-                        className="w-full max-h-48 object-cover rounded-md mb-4"
-                      />
-                    )}
-                    <h3 className="text-xl font-bold text-richblack mb-2">
-                      {project.title}
-                    </h3>
-                    <p className="text-mutedgray mb-4 line-clamp-2">
-                      {project.short_description}
-                    </p>
-                    <div className="flex gap-4 text-sm items-center">
-                      {project.live_link && (
-                        <a
-                          href={project.live_link}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="text-gray-700 hover:text-black transition font-semibold"
-                        >
-                          Live Site
-                        </a>
+                  <div key={project.id} className="px-2">
+                    <div
+                      onClick={() => navigate(`/project/${project.id}`)}
+                      className="cursor-pointer bg-sloughtgray shadow hover:shadow-md rounded-xl overflow-hidden p-4 transition-all w-full max-w-sm mx-auto"
+                    >
+                      {project.image && (
+                        <img
+                          src={project.image}
+                          alt={project.title}
+                          className="w-full max-h-48 object-cover rounded-md mb-4"
+                        />
                       )}
-                      {project.github_link && (
-                        <a
-                          href={project.github_link}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="bg-verydarkgray text-sloughtgray p-2 rounded shadow hover:bg-darkgray transition"
-                        >
-                          GitHub
-                        </a>
-                      )}
+                      <h3 className="text-xl font-bold text-richblack mb-2">
+                        {project.title}
+                      </h3>
+                      <p className="text-mutedgray mb-4 line-clamp-2">
+                        {project.short_description}
+                      </p>
+                      <div className="flex gap-4 text-sm items-center">
+                        {project.live_link && (
+                          <a
+                            href={project.live_link}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="text-gray-700 hover:text-black transition font-semibold"
+                          >
+                            Live Site
+                          </a>
+                        )}
+                        {project.github_link && (
+                          <a
+                            href={project.github_link}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="bg-verydarkgray text-sloughtgray p-2 rounded shadow hover:bg-darkgray transition"
+                          >
+                            GitHub
+                          </a>
+                        )}
+                      </div>
                     </div>
                   </div>
                 ))}
@@ -113,6 +116,8 @@ const ProjectHighlights = () => {
           <p className="text-center text-gray-500">Loading projects...</p>
         )}
       </div>
+
+      
     </section>
   );
 };
